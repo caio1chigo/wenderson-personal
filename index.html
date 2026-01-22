@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wenderson - Personal Trainer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; color: #fff; overflow-x: hidden; }
+        
+        /* Parallax Header */
+      .hero {
+    height: 90vh;
+    background: url(IMG_E1469.JPG) center/contain fixed; /* Mudança: contain preserva proporção */
+    background-size: 100% auto; /* Ajuste % para zoom in/out; auto mantém altura proporcional */
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; position: relative;
+}
+
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background:  } /* Overlay vermelho */
+        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 20px; }
+        .hero h1 { font-size: 4rem; font-weight: bold; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.5rem; margin-bottom: 20px; }
+        .badge { background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 30px; backdrop-filter: blur(10px); }
+
+        /* Conteúdo Principal */
+        .content { padding: 80px 20px; background: #8B0000; text-align: center; }
+        .content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Links Rodapé */
+        .links { background: #000; padding: 40px 20px; text-align: center; }
+        .link-btn { display: block; margin: 15px auto; padding: 15px 30px; background: #fff; color: #8B0000; text-decoration: none; border-radius: 50px; font-weight: bold; max-width: 300px; transition: transform 0.3s; }
+        .link-btn:hover { transform: scale(1.05); }
+
+        /* Responsivo */
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .hero p { font-size: 1.2rem; } }
+        
+        /* Parallax JS */
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector('.hero').style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">Personal Trainer</div>
+            <h1>WENDERSON</h1>
+            <p>Personal Trainer dedicado a treinos eficazes e um estilo de vida saudável</p>
+        </div>
+    </section>
+    
+    <section class="content">
+        <h2>Especialista em musculação e emagrecimento, atendimento presencial e online, transforme seu corpo em 8 semanas. </h2>
+        <p>Formas de contato/Redes sociais.</p>
+    </section>
+    
+    <section class="links">
+        <a href="https://www.instagram.com/personal_wenderson/" class="link-btn">@personal_wenderson</a>
+        <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5561984805908%26text%3DGostaria%2Bde%2Bmais%2Binforma%25C3%25A7%25C3%25B5es%2B%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn9huQlVlg0EkpIZ-Bh-zIdMgB2BqS-b84bunvUynLHAgSzthKcpk6l7SFU9M_aem__oey_QvKwAHZMUAzQBvboQ&e=AT1MOnNuYY8wxXff_JP15Tbl44GwTrcOXExzGkhKmKJwlvVccG35X6b2lsaylx_3L8WBOSio0qErGSs6cf2iukuyKLT7qOez_mrVhth9jis663iLLQaaHTdP7w" class="link-btn">(61) 98480-5908</a>
+     
+        <!-- Adicione mais links como o cliente pedir -->
+    </section>
+</body>
+</html>
